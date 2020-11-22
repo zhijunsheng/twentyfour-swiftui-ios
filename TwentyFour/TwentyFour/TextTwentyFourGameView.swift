@@ -11,33 +11,26 @@ struct TextTwentyFourGameView: View {
     var body: some View {
         VStack {
             HStack {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 9).stroke()
-                    Text("8")
-                        .font(.largeTitle)
-                }
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 9).stroke()
-                    Text("4")
-                        .font(.largeTitle)
-                }
+                TextCardView(cardFace: "10")
+                TextCardView(cardFace: "4")
             }
             HStack {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 9).stroke()
-                    Text("3")
-                        .font(.largeTitle)
-                }
-                ZStack {
-                    RoundedRectangle(cornerRadius: 9).stroke()
-                    Text("7")
-                        .font(.largeTitle)
-                }
+                TextCardView(cardFace: "3")
+                TextCardView(cardFace: "7")
             }
         }
         .padding()
-        
+    }
+}
+
+struct TextCardView: View {
+    var cardFace: String
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 9).stroke()
+            Text(cardFace)
+                .font(.largeTitle)
+        }
     }
 }
 

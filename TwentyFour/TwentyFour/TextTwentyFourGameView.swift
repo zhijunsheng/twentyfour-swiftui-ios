@@ -9,7 +9,35 @@ import SwiftUI
 
 struct TextTwentyFourGameView: View {
     var body: some View {
-        Text("8")
+        VStack {
+            HStack {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 9).stroke()
+                    Text("8")
+                        .font(.largeTitle)
+                }
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 9).stroke()
+                    Text("4")
+                        .font(.largeTitle)
+                }
+            }
+            HStack {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 9).stroke()
+                    Text("3")
+                        .font(.largeTitle)
+                }
+                ZStack {
+                    RoundedRectangle(cornerRadius: 9).stroke()
+                    Text("7")
+                        .font(.largeTitle)
+                }
+            }
+        }
+        .padding()
+        
     }
 }
 

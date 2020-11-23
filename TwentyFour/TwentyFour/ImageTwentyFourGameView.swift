@@ -20,11 +20,12 @@ struct ImageTwentyFourGameView: View {
                 ImageCardView(card: imageTwentyFourGame.card2)
                 ImageCardView(card: imageTwentyFourGame.card3)
             }
+            Button("Next") {
+                imageTwentyFourGame.newGame()
+            }
+            .font(.largeTitle)
         }
         .padding()
-        .onTapGesture {
-            imageTwentyFourGame.newGame()
-        }
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TextTwentyFourGameView: View {
-    var textTwentyFourGame: TextTwentyFourGame
+    @ObservedObject var textTwentyFourGame: TextTwentyFourGame
     
     var body: some View {
         VStack {
@@ -22,6 +22,10 @@ struct TextTwentyFourGameView: View {
             }
         }
         .padding()
+        .contentShape(Rectangle())
+        .onTapGesture {
+            textTwentyFourGame.newGame()
+        }
     }
 }
 

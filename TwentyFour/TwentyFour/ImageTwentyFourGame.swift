@@ -10,8 +10,8 @@ import SwiftUI
 class ImageTwentyFourGame {
     private var game = TwentyFourGame<Image>(cardContentFactory: { (num) -> Image in
         let numStr: String = num == 1 ? "A" : "\(num)"
-        
-        return Image(numStr + "D")
+        let suit: String = ["S", "H", "D", "C"][Int(arc4random()) % 4]
+        return Image(numStr + suit)
     })
     
     var card0: TwentyFourGame<Image>.Card { game.card0 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ImageTwentyFourGameView: View {
-    var imageTwentyFourGame: ImageTwentyFourGame
+    @ObservedObject var imageTwentyFourGame: ImageTwentyFourGame
     
     var body: some View {
         VStack {

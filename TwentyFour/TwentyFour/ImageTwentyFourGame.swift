@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-class ImageTwentyFourGame {
-    private var game = TwentyFourGame<Image>() { (num) -> Image in
+class ImageTwentyFourGame: ObservableObject {
+    @Published private var game = TwentyFourGame<Image>() { (num) -> Image in
         var numStr: String
         
         switch num {
@@ -34,8 +34,6 @@ class ImageTwentyFourGame {
     var card3: TwentyFourGame<Image>.Card { game.card3 }
     
     func newGame() {
-        print("creating a new game")
         game.newGame()
-        print("\(card0.number), \(card1.number), \(card2.number), \(card3.number)")
     }
 }

@@ -15,7 +15,11 @@ struct TwentyFourGame<CardContent> {
     private(set) var card2: Card
     private(set) var card3: Card
     
-    init(cardContentFactory: (Int) -> CardContent) {
+    var cardContentFactory: (Int) -> CardContent
+    
+    init(cardContentFactory: @escaping (Int) -> CardContent) {
+        self.cardContentFactory = cardContentFactory
+        
         let num0: Int = Int(arc4random()) % maxNum + 1
         card0 = Card(number: num0, content: cardContentFactory(num0))
         
@@ -31,9 +35,13 @@ struct TwentyFourGame<CardContent> {
     
     mutating func newGame() {
         card0.number = Int(arc4random()) % maxNum + 1
+        card0.content = cardContentFactory(card0.number)
         card1.number = Int(arc4random()) % maxNum + 1
+        card1.content = cardContentFactory(card1.number)
         card2.number = Int(arc4random()) % maxNum + 1
+        card2.content = cardContentFactory(card2.number)
         card3.number = Int(arc4random()) % maxNum + 1
+        card3.content = cardContentFactory(card3.number)
     }
     
     struct Card {

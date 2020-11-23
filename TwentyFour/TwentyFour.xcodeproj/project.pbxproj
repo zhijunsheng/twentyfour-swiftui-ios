@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0705931C256A860800D59D97 /* TextTwentyFourGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0705931B256A860800D59D97 /* TextTwentyFourGameView.swift */; };
+		07059320256B33C900D59D97 /* TwentyFourGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0705931F256B33C900D59D97 /* TwentyFourGame.swift */; };
 		07E8C94925694296002E2A62 /* TwentyFourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8C94825694296002E2A62 /* TwentyFourApp.swift */; };
 		07E8C94B25694296002E2A62 /* ImageTwentyFourGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8C94A25694296002E2A62 /* ImageTwentyFourGameView.swift */; };
 		07E8C94D25694297002E2A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E8C94C25694297002E2A62 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		0705931B256A860800D59D97 /* TextTwentyFourGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTwentyFourGameView.swift; sourceTree = "<group>"; };
+		0705931F256B33C900D59D97 /* TwentyFourGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyFourGame.swift; sourceTree = "<group>"; };
 		07E8C94525694296002E2A62 /* TwentyFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwentyFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E8C94825694296002E2A62 /* TwentyFourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyFourApp.swift; sourceTree = "<group>"; };
 		07E8C94A25694296002E2A62 /* ImageTwentyFourGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTwentyFourGameView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				07E8C94C25694297002E2A62 /* Assets.xcassets */,
 				07E8C95125694297002E2A62 /* Info.plist */,
 				07E8C94E25694297002E2A62 /* Preview Content */,
+				0705931F256B33C900D59D97 /* TwentyFourGame.swift */,
 			);
 			path = TwentyFour;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07059320256B33C900D59D97 /* TwentyFourGame.swift in Sources */,
 				0705931C256A860800D59D97 /* TextTwentyFourGameView.swift in Sources */,
 				07E8C94B25694296002E2A62 /* ImageTwentyFourGameView.swift in Sources */,
 				07E8C94925694296002E2A62 /* TwentyFourApp.swift in Sources */,

@@ -32,4 +32,10 @@ class ImageTwentyFourGame {
     var card1: TwentyFourGame<Image>.Card { game.card1 }
     var card2: TwentyFourGame<Image>.Card { game.card2 }
     var card3: TwentyFourGame<Image>.Card { game.card3 }
+    
+    func newGame() {
+        print("creating a new game")
+        game.newGame()
+        print("\(card0.number), \(card1.number), \(card2.number), \(card3.number)")
+    }
 }

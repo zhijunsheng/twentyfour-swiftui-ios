@@ -29,6 +29,13 @@ struct TwentyFourGame<CardContent> {
         card3 = Card(number: num3, content: cardContentFactory(num3))
     }
     
+    mutating func newGame() {
+        card0.number = Int(arc4random()) % maxNum + 1
+        card1.number = Int(arc4random()) % maxNum + 1
+        card2.number = Int(arc4random()) % maxNum + 1
+        card3.number = Int(arc4random()) % maxNum + 1
+    }
+    
     struct Card {
         var number: Int
         var content: CardContent

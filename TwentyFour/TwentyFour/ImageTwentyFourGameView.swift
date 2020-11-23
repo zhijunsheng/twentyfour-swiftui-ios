@@ -22,6 +22,9 @@ struct ImageTwentyFourGameView: View {
             }
         }
         .padding()
+        .onTapGesture {
+            imageTwentyFourGame.newGame()
+        }
     }
 }
 

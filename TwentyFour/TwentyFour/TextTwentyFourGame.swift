@@ -8,7 +8,7 @@
 import SwiftUI
 
 class TextTwentyFourGame {
-    private var game = TwentyFourGame<String>(num0: 1, num1: 2, num2: 3, num3: 4) { (num) in "\(num)" }
+    private var game = TwentyFourGame<String>() { (num) in "\(num)" }
     
     var card0: TwentyFourGame<String>.Card { game.card0 }
     var card1: TwentyFourGame<String>.Card { game.card1 }

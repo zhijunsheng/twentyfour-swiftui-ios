@@ -11,7 +11,8 @@ import SwiftUI
 struct TwentyFourApp: App {
     var body: some Scene {
         WindowGroup {
-            TextTwentyFourGameView()
+            let game = TextTwentyFourGame()
+            TextTwentyFourGameView(textTwentyFourGame: game)
         }
     }
 }

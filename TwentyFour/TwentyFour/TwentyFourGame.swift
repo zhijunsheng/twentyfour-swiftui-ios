@@ -8,10 +8,10 @@
 import Foundation
 
 struct TwentyFourGame<CardContent> {
-    private var card0: Card
-    private var card1: Card
-    private var card2: Card
-    private var card3: Card
+    private(set) var card0: Card
+    private(set) var card1: Card
+    private(set) var card2: Card
+    private(set) var card3: Card
     
     init(num0: Int, num1: Int, num2: Int, num3: Int, cardContentFactory: (Int) -> CardContent) {
         card0 = Card(number: num0, content: cardContentFactory(num0))

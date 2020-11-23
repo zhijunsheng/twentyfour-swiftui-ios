@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct TextTwentyFourGameView: View {
+    var textTwentyFourGame: TextTwentyFourGame
+    
     var body: some View {
         VStack {
             HStack {
-                TextCardView(cardFace: "10")
-                TextCardView(cardFace: "4")
+                TextCardView(card: textTwentyFourGame.card0)
+                TextCardView(card: textTwentyFourGame.card1)
             }
             HStack {
-                TextCardView(cardFace: "3")
-                TextCardView(cardFace: "7")
+                TextCardView(card: textTwentyFourGame.card2)
+                TextCardView(card: textTwentyFourGame.card3)
             }
         }
         .padding()
@@ -24,11 +26,11 @@ struct TextTwentyFourGameView: View {
 }
 
 struct TextCardView: View {
-    var cardFace: String
+    var card: TwentyFourGame<String>.Card
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 9).stroke()
-            Text(cardFace)
+            Text(card.content)
                 .font(.largeTitle)
         }
     }
@@ -36,6 +38,6 @@ struct TextCardView: View {
 
 struct TextTwentyFourGameView_Previews: PreviewProvider {
     static var previews: some View {
-        TextTwentyFourGameView()
+        TextTwentyFourGameView(textTwentyFourGame: TextTwentyFourGame())
     }
 }

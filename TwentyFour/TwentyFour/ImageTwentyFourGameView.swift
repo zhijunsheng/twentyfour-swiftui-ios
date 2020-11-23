@@ -8,31 +8,34 @@
 import SwiftUI
 
 struct ImageTwentyFourGameView: View {
+    var imageTwentyFourGame: ImageTwentyFourGame
+    
     var body: some View {
         VStack {
             HStack {
-                Image("QH")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                Image("KC")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                ImageCardView(card: imageTwentyFourGame.card0)
+                ImageCardView(card: imageTwentyFourGame.card1)
             }
             HStack {
-                Image("JC")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                Image("AD")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                ImageCardView(card: imageTwentyFourGame.card2)
+                ImageCardView(card: imageTwentyFourGame.card3)
             }
         }
         .padding()
     }
 }
 
+struct ImageCardView: View {
+    var card: TwentyFourGame<Image>.Card
+    var body: some View {
+        card.content
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageTwentyFourGameView()
+        ImageTwentyFourGameView(imageTwentyFourGame: ImageTwentyFourGame())
     }
 }

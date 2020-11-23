@@ -32,10 +32,12 @@ struct TextTwentyFourGameView: View {
 struct TextCardView: View {
     var card: TwentyFourGame<String>.Card
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 9).stroke()
-            Text(card.content)
-                .font(.largeTitle)
+        GeometryReader { geo in
+            ZStack {
+                RoundedRectangle(cornerRadius: 9).stroke()
+                Text(card.content)
+                    .font(Font.system(size: min(geo.size.width, geo.size.height) * 0.7))
+            }
         }
     }
 }

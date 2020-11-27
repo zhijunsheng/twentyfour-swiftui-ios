@@ -10,18 +10,28 @@ import SwiftUI
 struct ImageTwentyFourGameView: View {
     @ObservedObject var imageTwentyFourGame: ImageTwentyFourGame
     
+    @State var opacity: Double = 1
+    
     var body: some View {
         VStack {
-            HStack {
-                ImageCardView(card: imageTwentyFourGame.card0)
-                ImageCardView(card: imageTwentyFourGame.card1)
+            Group {
+                HStack {
+                    ImageCardView(card: imageTwentyFourGame.card0)
+                    ImageCardView(card: imageTwentyFourGame.card1)
+                }
+                HStack {
+                    ImageCardView(card: imageTwentyFourGame.card2)
+                    ImageCardView(card: imageTwentyFourGame.card3)
+                }
             }
-            HStack {
-                ImageCardView(card: imageTwentyFourGame.card2)
-                ImageCardView(card: imageTwentyFourGame.card3)
-            }
+            .opacity(opacity)
+            
             Button("Next") {
                 imageTwentyFourGame.newGame()
+                opacity = 0
+                withAnimation(.easeInOut(duration: 0.75)) {
+                    opacity = 1
+                }
             }
             .font(.largeTitle)
         }
